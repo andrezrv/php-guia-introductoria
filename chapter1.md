@@ -336,6 +336,32 @@ echo $mensaje;
 
 ### Arrays
 
+Un array es lo que se entiende en programación como un mapa ordenado de datos. Básicamente, permite agrupar diferentes datos de manera ordenada con una combinación de clave y valor.
+
+**Ejemplo:**
+
+```php
+<?php
+$lista = array( 0 => 'Pan', 1 => 'Leche', 2 => 'Azúcar' );
+
+echo $lista[0]; // Imprime "Pan".
+echo $lista[1]; // Imprime "Leche".
+echo $lista[2]; // Imprime "Azúcar".
+?>
+```
+
+También es posible no especificar la clave de cada elemento. En esos casos, PHP asigna una clave numérica al elemento de forma automática.
+
+```php
+<?php
+$lista = array( 'Pan', 'Leche', 'Azúcar' );
+
+echo $lista[0]; // Imprime "Pan".
+echo $lista[1]; // Imprime "Leche".
+echo $lista[2]; // Imprime "Azúcar".
+?>
+```
+
 #### Concatenación
 
 La concatenación es la unión de dos o más cadenas de caracteres. En PHP existen dos maneras de concatenar caracteres.
@@ -701,3 +727,21 @@ foreach ( $lista as $clave => $valor ) {
 ```
 
 ## Inclusiones
+
+PHP nos permite separar nuestro código en diferentes archivos para poder mantenerlo de forma más ordenada. Para esto contamos con las construcciones `require`, `require_once`, `include` e `include_once`.
+
+Por ejemplo, si estamos trabajando en un archivo llamado `contacto.php`, y queremos reutilizar el código contenido en `encabezado.php`, debemos usar una de las cuatro construcciones para incluir el archivo:
+
+```php
+# contacto.php
+<?php
+require 'encabezado.php';
+require_once 'encabezado.php';
+include 'encabezado.php';
+include_once 'encabezado.php';
+?>
+```
+
+Una diferencia entre estas construcciones es que aquellas con el sufijo `_once` solamente incluyen el archivo si no fue incluido previamente en alguna parte de la aplicación, lo cual evita la replicación de código. Sin embargo, a veces es deseable que el código se replique, y en estos casos se debe preferir usar `include` o `require`.
+
+Otra diferencia es que `require` y `require_once` hacen una inclusión estricta, es decir que PHP va a arrojar un error fatal y cortar la ejecución de la aplicación en caso de que el archivo no se encuentre. En el caso de `include` e `include_once` no hay error fatal ni se detiene la ejecución, pero sí se imprime una advertencia.
