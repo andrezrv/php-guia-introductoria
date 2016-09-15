@@ -636,7 +636,7 @@ De esta manera, evaluamos si el valor que se le da a `switch()` como parámetro 
 
 ### while
 
-Es una de las estructuras de control del tipo bucle, o *loop*. Esto significa que la estructura se repetirá un número dado de veces, hasta que se le indique que debe dejar de ejecutarse.
+Es una de las estructuras de control del tipo bucle, o *loop*. Esto significa que la estructura se repetirá un número dado de veces (o iteraciones), hasta que se le indique que debe dejar de ejecutarse.
 
 **Ejemplo:**
 
@@ -654,9 +654,25 @@ while ( $i <= 5 ) {
 ?>
 ```
 
-Es muy importante cortar el ciclo en algún punto ya que, de lo contrario, el bucle se ejecutará al infinito, lo cual puede llegar a colgar el equipo debido a un alto consumo de memoria.
+Es muy importante cortar el ciclo en alguna de sus iteraciones ya que, de lo contrario, el bucle se ejecutará al infinito, lo cual puede llegar a colgar el equipo debido a un alto consumo de memoria.
 
 ### for
+
+Es similar a `while`, aunque un poco menos semántico, lo cual puede hacerlo más difícil de entender.
+
+A diferencia de `while`, `for` está exclusivamente pensado para operar con valores numéricos. Además, recibe una tríada de parámetros separados por `;`. El primer parámetro es el estado inicial del bucle, el segundo es la condición de corte, y el tercero es una operación a realizar al final de cada iteración.
+
+El ejemplo anterior con `while` puede reformularse con `for` de esta manera:
+
+```php
+<?php
+for ( $i = 0; $i <= 5; $i++ ) {
+  echo $i; // Se imprime $i.
+}
+
+// Se imprime "012345".
+?>
+```
 
 ### foreach
 
