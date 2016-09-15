@@ -362,6 +362,30 @@ echo $lista[2]; // Imprime "Azúcar".
 ?>
 ```
 
+Las claves pueden especificarse también como cadenas de texto, y luego accederse como tales:
+
+```php
+<?php
+$lista = array( 'cero' => 'Pan', 'uno' => 'Leche', 'dos' => 'Azúcar' );
+
+echo $lista['cero']; // Imprime "Pan".
+echo $lista['uno'];  // Imprime "Leche".
+echo $lista['dos'];  // Imprime "Azúcar".
+?>
+```
+
+Incluso aunque las claves se especifiquen como texto, también siguen siendo accesibles según su posición:
+
+```php
+<?php
+$lista = array( 'cero' => 'Pan', 'uno' => 'Leche', 'dos' => 'Azúcar' );
+
+echo $lista[0]; // Imprime "Pan".
+echo $lista[1]; // Imprime "Leche".
+echo $lista[2]; // Imprime "Azúcar".
+?>
+```
+
 #### Concatenación
 
 La concatenación es la unión de dos o más cadenas de caracteres. En PHP existen dos maneras de concatenar caracteres.
