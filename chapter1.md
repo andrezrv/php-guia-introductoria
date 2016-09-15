@@ -428,14 +428,32 @@ Son los operadores básicos de suma (`+`), resta (`-`), multiplicación (`*`), d
 
 ```php
 <?php
-$a = 3 + 2;  // $a vale 5.
-$b = 3 - 1;  // $b vale 2.
-$c = 1 * 3;  // $c vale 3.
-$d = 9 / 3;  // $d vale 3;
-$e = 10 % 5; // $e vale 0.
-$f = 3 ** 2; // $f vale 9.
+$a = 3 + 2;   // $a vale 5.
+$b = 3 - 1.5; // $b vale 1.5.
+$c = 2 * 3.5; // $c vale 7.
+$d = 9 / 3;   // $d vale 3;
+$e = 10 % 5;  // $e vale 0.
+$f = 3 ** 2;  // $f vale 9.
 ?>
 ```
+
+### Operadores de comparación
+
+Sirven para comparar dos valores y tienen como resultado un valor de verdad: `true` o `false`.
+
+| Operador | Nombre | Uso | Resultado |
+| -- | -- | -- | -- |
+| == | Igual | $a == $b | `true` si `$a` y `$b` son iguales o equivalentes, aunque sean de diferentes tipos. |
+| === | Idéntico | $a === $b | 3:3 |
+| != | No igual | $a != $b | 3:4 |
+| <> | No igual | $a <> $b | 3:5 |
+| !== | No idéntico | $a !== $b | 3:6 |
+| < | Menor | 2:7 | $a < $b |
+| > | Mayor | 2:8 | $a > $b |
+| <= | Menor o igual | $a <= $b | 3:9 |
+| >= | Mayor o igual | $a >= $b | 3:10 |
+| <=> | _Spaceship_ | $a <=> $b | 3:11 |
+
 
 ## Evaluaciones
 ## Bucles
