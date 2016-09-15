@@ -676,4 +676,28 @@ for ( $i = 0; $i <= 5; $i++ ) {
 
 ### foreach
 
+Se utiliza para iterar sobre arrays. Recibe como parámetro el array que se planea iterar y genera una o dos nuevas variables que permiten acceder al contenido de cada elemento iterado.
+
+```php
+<?php
+$lista = array( 'Pan', 'Leche', 'Azúcar' );
+
+foreach ( $lista as $item ) {
+  echo $item; // Imprime cada elemento de la lista.
+}
+?>
+```
+
+También puede accederse por separado a la clave y valor de cada elemento:
+
+```php
+<?php
+$lista = array( 'Pan', 'Leche', 'Azúcar' );
+
+foreach ( $lista as $clave => $valor ) {
+  echo $clave . ': ' . $valor; // Imprime cada elemento de la lista.
+}
+?>
+```
+
 ## Inclusiones
