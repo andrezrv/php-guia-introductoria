@@ -291,9 +291,37 @@ echo $mensaje;
 ?>
 ```
 
+#### Concatenación
+
+La concatenación es la unión de dos o más cadenas de caracteres. En PHP existen dos maneras de concatenar caracteres.
+
+##### Concatenación simple
+
+Con el caracter `.` (punto) pueden unirse dos cadenas de texto al momento de imprimir o asignar.
+
+```php
+<?php
+$mensaje = '¡Hola Mundo!';
+
+echo $mensaje . ' ¿Cómo estás?'; // Imprime "¡Hola Mundo! ¿Cómo estás?".
+?>
+```
+
+##### Concatenación por asignación
+
+También pueden concatenarse textos por medio de una nueva asignación a una variable previamente declarada. Para eso se usa el operador `.=`, el cual añade el nuevo valor al final de la cadena original.
+
+```php
+<?php
+$mensaje = '¡Hola Mundo!';
+$mensaje .= ' ¿Cómo estás?';
+
+echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
+?>
+```
+
 ## Constantes
 ## Comentarios
-## Escape de texto
 ## Concatenación
 
 
