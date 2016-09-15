@@ -452,8 +452,56 @@ Sirven para comparar dos valores y tienen como resultado un valor de verdad: `tr
 | > | Mayor | $a > $b | `true` si $a es un entero o flotante mayor a $b |
 | <= | Menor o igual | $a <= $b | `true` si $a es un entero o flotante menor, igual o equivalente a $b |
 | >= | Mayor o igual | $a >= $b | `true` si $a es un entero o flotante mayor, igual o equivalente a $b |
-| <=> | _Spaceship_ | $a <=> $b | `true` si $a es un entero mayor a cero, y mayor o menor a $b |
 
+**Ejemplos:**
+
+```php
+<?php
+// Igualdad:
+$a1 = 1 == 1;   // $a1 es true.
+$a2 = 1 == 1.0; // $a2 es true.
+$a3 = 1 == '1'; // $a3 es true.
+$a4 = 1 == 2;   // $a4 es false.
+
+// Identidad
+$b1 = 1 === 1;   // $b1 es true.
+$b2 = 1 === 1.0; // $b2 es false.
+$b3 = 1 === '1'; // $b3 es false.
+$b4 = 1 === 2;   // $b4 es false.
+
+// No-igualdad:
+$c1 = 1 != 1;   // $c1 es false.
+$c2 = 1 != 1.0; // $c2 es false.
+$c3 = 1 != '1'; // $c3 es false.
+$c4 = 1 != 2;   // $c4 es true.
+
+// No-identidad
+$d1 = 1 !== 1;   // $d1 es false.
+$d2 = 1 !== 1.0; // $d2 es true.
+$d3 = 1 !== '1'; // $d3 es true.
+$d4 = 1 !== 2;   // $d4 es true.
+
+// Menor
+$e1 = 1 < 2;   // $e1 es true.
+$e2 = 1 < 1;   // $e2 es false.
+$e3 = 1 < 0.5; // $e3 es false.
+
+// Mayor
+$f1 = 1 > 2;   // $f1 es false.
+$f2 = 1 > 1;   // $f2 es false.
+$f3 = 1 > 0.5; // $f3 es true.
+
+// Menor o igual
+$g1 = 1 <= 2;   // $g1 es true.
+$g2 = 1 <= 1;   // $g2 es true.
+$g3 = 1 <= 0.5; // $g3 es false.
+
+// Mayor o igual
+$h1 = 1 >= 2;   // $h1 es false.
+$h2 = 1 >= 1;   // $h2 es true.
+$h3 = 1 >= 0.5; // $h3 es true.
+?>
+```
 
 ## Evaluaciones
 ## Bucles
