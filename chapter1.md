@@ -40,7 +40,7 @@ No importa si en este punto el código todavía es incomprensible, pero sí pued
 
 ## Comentarios
 
-En todos los lenguajes de programación existe alguna manera de dejar comentarios de texto para uso propio o de otros desarrolladores, a manera de documentación interna, dentro de los archivos donde se escribe el código, sin que estos comentarios tengan algún tipo de impacto en el código.
+En todos los lenguajes de programación existe alguna manera de dejar comentarios de texto para uso propio o de otros desarrolladores, a manera de documentación interna. Estos comentarios pueden escribirse dentro de los mismos archivos donde se escribe el código, sin tener ningún tipo de impacto en la aplicación.
 
 En PHP pueden escribirse comentarios de dos maneras:
 
@@ -62,7 +62,7 @@ Comentarios más extensos, que puedan llegar a contar con varias líneas, deben 
 ```php
 <?php
 /*
-Imprimo texto porque me gusta imprimir texto
+Yo imprimo texto porque me gusta imprimir texto
 Yo nací para imprimir texto...
 */
 echo '¡Hola Mundo!';
@@ -363,7 +363,7 @@ echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
 ?>
 ```
 
-## Constantes
+## Operadores
 ## Conversión de tipos
 ## Evaluaciones
 ## Bucles
