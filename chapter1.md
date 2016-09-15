@@ -169,7 +169,7 @@ print $mensaje1, $mensaje2;
 
 PHP soporta distintos tipos de datos, los cuales pueden cumplir con diferentes propósitos dentro de una aplicación.
 
-Debido a que el lenguaje no es declarativo acerca del tipo de datos que se asignan a variables (es decir que al momento de crear la variable no se especifica de qué tipo es el dato contenido), PHP reconoce el tipo de cada dato al momento de utilizarlo, y al mismo tiempo otorga cierta flexibilidad al comparar entre diferentes tipos.
+Debido a que el lenguaje no es declarativo acerca del tipo de datos que se asignan a variables (es decir que al momento de crear la variable no se especifica de qué tipo es el dato contenido), PHP reconoce el tipo de cada dato de forma automática, y al mismo tiempo otorga cierta flexibilidad al comparar entre diferentes tipos.
 
 ### Booleano
 
@@ -364,6 +364,64 @@ echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
 ```
 
 ## Operadores
+
+PHP soporta varias clases de operadores para modificar datos y evaluar condiciones de verdad. Los más utilizados son los operadores de asignación, los aritméticos, los de comparación y los de incremento y decremento.
+
+### Operadores de asignación
+
+Asignan o modifican el valor de una variable. El operador de asignación básico es `=`, que ya utilizamos tanto para inicializar como para sobreescribir una variable.
+
+```php
+<?php
+$mensaje = '¡Hola mundo!';  // Asigna "¡Hola Mundo!" a $mensaje.
+$mensaje = 'Chau mundo :('; // Sobreescribe $mensaje con "Chau mundo :(".
+?>
+```
+
+También vimos el operador `.=`, el cual adjunta una cadena de caracteres al final de otra.
+
+```php
+<?php
+$mensaje = '¡Hola mundo!';  // Asigna "¡Hola Mundo!" a $mensaje.
+$mensaje .= ' ¿Cómo estás?'; // Adjunta " ¿Cómo estás?" a $mensaje.
+
+echo $mensaje; // Imprime "¡Hola mundo! ¿Cómo estás?".
+?>
+```
+
+Los operadores de asignación también pueden combinarse con operadores aritméticos. Por ejemplo, existe el operador `+=`, utilizado para sumar un valor numérico a otro. Estos operadores combinados trabajan casi indistintamente sobre números enteros y de punto flotante, por lo cual se pueden combinar ambos tipos, y convertirlos de uno a otro.
+
+```php
+<?php
+$a = 3;  // $a vale 3.
+$a += 2; // $a vale 5.
+
+$b = 1; // $b vale 1.
+$b += 0.5; // $b vale 1.5, y se convierte su tipo a flotante.
+?>
+```
+
+Otros operadores combinados son `-=`, `*=`, `/=` y `%=`.
+
+```php
+<?php
+$a = 3;  // $a vale 3.
+$a -= 2; // $a vale 1.
+
+$b = 1; // $b vale 1.
+$b *= 3; // $b vale 3.
+
+$c = 4; // $c vale 4.
+$c *= 2; // $c vale 8;
+
+$d = 9; // $d vale 9;
+$d /= 3; // $d vale 3;
+
+$e = 10; // $e vale 10.
+$e %= 5; // $e vale 0;
+?>
+```
+
 ## Conversión de tipos
 ## Evaluaciones
 ## Bucles
