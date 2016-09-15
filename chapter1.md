@@ -437,7 +437,6 @@ $f = 3 ** 2; // $f vale 9.
 ?>
 ```
 
-## Conversión de tipos
 ## Evaluaciones
 ## Bucles
 ## Inclusiones
