@@ -444,15 +444,15 @@ Sirven para comparar dos valores y tienen como resultado un valor de verdad: `tr
 | Operador | Nombre | Uso | Resultado |
 | -- | -- | -- | -- |
 | == | Igual | $a == $b | `true` si `$a` y `$b` son iguales o equivalentes, aunque sean de diferentes tipos. |
-| === | Idéntico | $a === $b | 3:3 |
-| != | No igual | $a != $b | 3:4 |
-| <> | No igual | $a <> $b | 3:5 |
-| !== | No idéntico | $a !== $b | 3:6 |
-| < | Menor | 2:7 | $a < $b |
-| > | Mayor | 2:8 | $a > $b |
-| <= | Menor o igual | $a <= $b | 3:9 |
-| >= | Mayor o igual | $a >= $b | 3:10 |
-| <=> | _Spaceship_ | $a <=> $b | 3:11 |
+| === | Idéntico | $a === $b | `true` si `$a` y `$b` son iguales y del mismo tipo. |
+| != | No igual | $a != $b | `true` si `$a` y `$b` no son iguales o equivalentes, aunque sean de diferentes tipos. |
+| <> | No igual | $a <> $b | `true` si `$a` y `$b` no son iguales o equivalentes, aunque sean de diferentes tipos. |
+| !== | No idéntico | $a !== $b | `true` si `$a` y `$b` no son iguales ni del mismo tipo. |
+| < | Menor | $a < $b | `true` si $a es un entero o flotante menor a $b |
+| > | Mayor | $a > $b | `true` si $a es un entero o flotante mayor a $b |
+| <= | Menor o igual | $a <= $b | `true` si $a es un entero o flotante menor, igual o equivalente a $b |
+| >= | Mayor o igual | $a >= $b | `true` si $a es un entero o flotante mayor, igual o equivalente a $b |
+| <=> | _Spaceship_ | $a <=> $b | `true` si $a es un entero mayor a cero, y mayor o menor a $b |
 
 
 ## Evaluaciones
