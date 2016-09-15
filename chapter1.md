@@ -422,6 +422,21 @@ $e %= 5; // $e vale 0;
 ?>
 ```
 
+### Operadores aritméticos
+
+Son los operadores básicos de suma (`+`), resta (`-`), multiplicación (`*`), división (`/`), resto (`%`) y exponente (`**`). En la mayoría de los casos trabajan indistintamente sobre números enteros y flotantes.
+
+```php
+<?php
+$a = 3 + 2;  // $a vale 5.
+$b = 3 - 1;  // $b vale 2.
+$c = 1 * 3;  // $c vale 3.
+$d = 9 / 3;  // $d vale 3;
+$e = 10 % 5; // $e vale 0.
+$f = 3 ** 2; // $f vale 9.
+?>
+```
+
 ## Conversión de tipos
 ## Evaluaciones
 ## Bucles
