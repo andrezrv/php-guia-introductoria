@@ -503,6 +503,42 @@ $h3 = 1 >= 0.5; // $h3 es true.
 ?>
 ```
 
+### Operadores de incremento y decremento
+
+Sirven para aumentar o disminuir un valor numérico en una unidad sin realizar una nueva asignación.
+
+| Operador | Uso | Nombre | Efecto |
+| -- | -- | -- | -- |
+| ++ | ++$a | Pre-incremento | Suma 1 a $a y lo devuelve. |
+| ++ | $a++ | Post-incremento | Devuelve $a y le suma 1. |
+| -- | --$a | Pre-decremento | Resta 1 a $a y lo devuelve. |
+| -- | $a-- | Post-decremento | Devuelve $a y le resta 1. |
+
+**Ejemplos:**
+
+```php
+<?php
+// Pre-incremento
+$a = 5;
+echo ++$a; // Imprime 6.
+echo $a;   // Imprime 6.
+
+// Post-incremento
+$b = 5;
+echo $b++; // Imprime 5.
+echo $b;   // Imprime 6.
+
+// Pre-decremento
+$c = 5;
+echo --$c; // Imprime 4.
+echo $c;   // Imprime 4.
+
+// Post-decremento
+$d = 5;
+echo $d--; // Imprime 5.
+echo $d;   // Imprime 4.
+?>```
+
 ## Evaluaciones
 ## Bucles
 ## Inclusiones
