@@ -365,7 +365,7 @@ echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
 
 ## Operadores
 
-PHP soporta varias clases de operadores para modificar datos y evaluar condiciones de verdad. Los más utilizados son los operadores de asignación, los aritméticos, los de comparación y los de incremento y decremento.
+PHP soporta varias clases de operadores para modificar datos y evaluar condiciones de verdad. Los más utilizados son los operadores de asignación, los aritméticos, los de comparación, los de incremento y decremento, y los lógicos.
 
 ### Operadores de asignación
 
@@ -539,6 +539,75 @@ echo $d--; // Imprime 5.
 echo $d;   // Imprime 4.
 ?>```
 
-## Evaluaciones
-## Bucles
+## Estructuras de control
+
+Las estructuras de control sirven para evaluar datos y, en base a sus resultados, ejecutar alguna acción determinada en la aplicación. Existen diferentes tipos de estructuras de control.
+
+### if / elseif / else
+
+La estructura `if()` es la más simple de las estructuras de control, y solamente evalúa si un resultado es verdadero o falso. En caso de que la evaluación sea verdadera, ejecuta el código contenido dentro de la estructura.
+
+```php
+<?php
+$a = true;
+$mensaje = '¡Hola Mundo!';
+
+// Se evalúa si $a es igual a true.
+if ( $a == true ) {
+  // Si la evaluación es verdadera, se imprime el mensaje.
+  echo $mensaje;
+}
+
+?>```
+
+Un detalle importante a notar es que los valores booleanos pueden evaluarse sin necesidad de usar operadores de comparación. Teniendo eso en cuenta, el siguiente código es equivalente al anterior:
+
+```php
+<?php
+$a = true;
+$mensaje = '¡Hola Mundo!';
+
+// Se evalúa si $a es igual a true.
+if ( $a ) {
+  // Si la evaluación es verdadera, se imprime el mensaje.
+  echo $mensaje;
+}
+?>```
+
+En caso de que se necesiten evaluaciones adicionales para ejecutar procesos alternativos, puede introducirse `elseif()` a la estructura de control.
+
+```php
+<?php
+$a = false;
+$b = true;
+
+$mensaje_a = '¡Hola Mundo!';
+$mensaje_b = ':(';
+
+if ( $a ) {
+  echo $mensaje;
+} elseif( $b ) {
+  echo $b;
+}
+?>```
+
+Si se quiere ejecutar un proceso por defecto en caso de que no cumpla ninguna condición de la estructura, puede introducirse `else`.
+
+```php
+<?php
+$a = false;
+$b = false;
+
+$mensaje_a = '¡Hola Mundo!';
+$mensaje_b = ':(';
+
+if ( $a ) {
+  echo $mensaje;
+} elseif( $b ) {
+  echo $b;
+} else {
+  echo ':\'('; // Imprime ":'(".
+}
+?>```
+
 ## Inclusiones
