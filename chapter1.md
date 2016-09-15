@@ -334,6 +334,8 @@ echo $mensaje;
 ?>
 ```
 
+### Arrays
+
 #### Concatenación
 
 La concatenación es la unión de dos o más cadenas de caracteres. En PHP existen dos maneras de concatenar caracteres.
@@ -609,5 +611,53 @@ if ( $a ) {
   echo ':\'('; // Imprime ":'(".
 }
 ?>```
+
+### switch
+
+Para evitar largas estructuras de `if/elseif/else`, puede usarse la estructura `switch`.
+
+```php
+<?php
+$a = 'Hola';
+
+switch ( $a ) {
+  case 'Hola':
+    echo '¡Hola Mundo!';
+    break;
+  case 'Chau':
+    echo 'Chau Mundo :(';
+    break;
+  default:
+    echo ':(';
+}
+?>```
+
+De esta manera, evaluamos si el valor que se le da a `switch()` como parámetro es igual a alguno de los casos especificados en la estructura. Si es igual, se ejecuta el código contenido en el caso correspondiente. De lo contrario, de ejecuta el código contenido en `default`.
+
+### while
+
+Es una de las estructuras de control del tipo bucle, o *loop*. Esto significa que la estructura se repetirá un número dado de veces, hasta que se le indique que debe dejar de ejecutarse.
+
+**Ejemplo:**
+
+```php
+<?php
+$i = 0; // Se inicializa un contador.
+
+// Mientras $i sea menor o igual a 5...
+while ( $i <= 5 ) {
+  echo $i; // Se imprime $i.
+  $i++;    // Se suma 1 a $i.
+}
+
+// Se imprime "012345".
+?>
+```
+
+Es muy importante cortar el ciclo en algún punto ya que, de lo contrario, el bucle se ejecutará al infinito, lo cual puede llegar a colgar el equipo debido a un alto consumo de memoria.
+
+### for
+
+### foreach
 
 ## Inclusiones
