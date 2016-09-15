@@ -38,6 +38,37 @@ Sin embargo, con la introducción en este archivo de las etiquetas de apertura y
 
 No importa si en este punto el código todavía es incomprensible, pero sí puede notarse, en base al ejemplo, cómo el HTML correspondiente a la lista de compras se genera dinámicamente por medio de PHP.
 
+## Comentarios
+
+En todos los lenguajes de programación existe alguna manera de dejar comentarios de texto para uso propio o de otros desarrolladores, a manera de documentación interna, dentro de los archivos donde se escribe el código, sin que estos comentarios tengan algún tipo de impacto en el código.
+
+En PHP pueden escribirse comentarios de dos maneras:
+
+### Comentarios de línea única
+
+Con `//` pueden iniciarse comentarios que solamente se extienden por una línea del código:
+
+```php
+<?php
+// Imprimo texto:
+echo '¡Hola Mundo!';
+?>
+```
+
+### Comentarios de líneas múltiples
+
+Comentarios más extensos, que puedan llegar a contar con varias líneas, deben iniciarse con `/*` y terminar con `*/`.
+
+```php
+<?php
+/*
+Imprimo texto porque me gusta imprimir texto
+Yo nací para imprimir texto...
+*/
+echo '¡Hola Mundo!';
+?>
+```
+
 ## Variables
 Las variables son elementos de un lenguaje de programación que permiten guardar ciertos datos de una aplicación para luego poder reutilizarlos.
 
@@ -64,6 +95,18 @@ echo $mensaje; // Se imprime en pantalla "¡Hola mundo!"
 $mensaje = '¿Cómo estás?'; // Se redeclara el valor de la variable.
 
 echo $mensaje; // Se imprime en pantalla "¿Cómo estás?"
+?>
+```
+
+## Constantes
+
+Son similares a las variables, con la diferencia de que no pueden sobreescribirse. También difieren en que se las declara con la función `define()`, y no hace falta que lleven el símbolo `$`. Generalmente se usan para guardar datos de configuración de una aplicación, y por convención se las declara con mayúsculas.
+
+```php
+<?php
+define( 'MENSAJE', '¡Hola mundo!' );
+
+echo MENSAJE; // Imprime "¡Hola mundo!".
 ?>
 ```
 
@@ -321,7 +364,7 @@ echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
 ```
 
 ## Constantes
-## Comentarios
-## Concatenación
-
-
+## Conversión de tipos
+## Evaluaciones
+## Bucles
+## Inclusiones
