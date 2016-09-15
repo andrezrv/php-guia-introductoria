@@ -126,6 +126,8 @@ print $mensaje1, $mensaje2;
 
 PHP soporta distintos tipos de datos, los cuales pueden cumplir con diferentes propósitos dentro de una aplicación.
 
+Debido a que el lenguaje no es declarativo acerca del tipo de datos que se asignan a variables (es decir que al momento de crear la variable no se especifica de qué tipo es el dato contenido), PHP reconoce el tipo de cada dato al momento de utilizarlo, y al mismo tiempo otorga cierta flexibilidad al comparar entre diferentes tipos.
+
 ### Booleano
 
 El booleano (también *boolean* o *bool*) es el más simple de todos los tipos de datos, y representa un valor de verdad, el cual puede ser `true` (verdadero) o `false` (falso). Normalmente se lo utiliza para evaluar condiciones.
@@ -154,4 +156,63 @@ $a = 0x1A; // Número hexadecimal (equivalente a 26 decimal).
 $a = 0b11111111; // Número binario (equivalente a 255 decimal).
 ?>
 ```
+
+### Número de punto flotante
+
+También conocido como *float*, es un dato numérico que puede ser expresado como cualquier tipo de número real, aunque principalmente se lo usa con decimales.
+
+```php
+<?php
+$a = 1.0;
+$b = 1.01;
+$c = 100.123;
+?>
+```
+
+### Cadenas de caracteres
+
+También llamado *string*, es un tipo de dato expresado como una cadena de caracteres en diferentes formatos, aunque los más utilizados son los siguientes:
+
+#### Comillas simples o dobles
+
+El uso de ambos tipos de comillas suele producir resultados similares, aunque existen algunas diferencias considerables entre cada uno.
+
+Por ejemplo, la siguiente pieza de código imprime exactamente el mismo texto para los dos casos:
+
+```php
+<?php
+echo "¡Hola Mundo!"; // Imprime "¡Hola Mundo!";
+echo '¡Hola Mundo!'; // Imprime "¡Hola Mundo!";
+?>
+```
+
+Sin embargo, en este caso se presentan diferencias:
+
+```php
+<?php
+$mensaje = '¿Cómo estás?';
+
+echo "¡Hola Mundo! $mensaje"; // Imprime "¡Hola Mundo! ¿Cómo estás?";
+echo '¡Hola Mundo! $mensaje'; // Imprime "¡Hola Mundo! $mensaje";
+?>
+```
+
+Como se ve en el ejemplo, usando comillas dobles, las variables dentro del texto se interpretan como tales; mientras que, usando comillas simples, se interpreta como texto el nombre de la variable.
+
+Para resolver este problema en el caso de las comillas simples, puede usarse una concatenación de texto:
+
+```php
+<?php
+$mensaje = '¿Cómo estás?';
+
+echo "¡Hola Mundo! $mensaje"; // Imprime "¡Hola Mundo! ¿Cómo estás?";
+echo '¡Hola Mundo! ' . $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?";
+?>
+```
+
+
+## Comentarios
+## Escape de texto
+## Concatenación
+
 
