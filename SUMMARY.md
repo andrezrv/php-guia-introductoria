@@ -9,4 +9,5 @@
   * [Impresión de texto](Parte 1: Conceptos Básicos/Impresión de texto.md)
   * [Tipos de datos](Parte 1: Conceptos Básicos/Tipos de datos.md)
   * [Operadores](Parte 1: Conceptos Básicos/Operadores.md)
+  * [Estructuras de Control](Parte 1: Conceptos Básicos/Estructuras de Control.md)
   * [Carga de archivos](Parte 1: Conceptos Básicos/Inclusiones.md)
