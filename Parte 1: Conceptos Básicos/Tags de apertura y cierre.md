@@ -38,35 +38,6 @@ Sin embargo, con la introducción en este archivo de las etiquetas de apertura y
 
 No importa si en este punto el código todavía es incomprensible, pero sí puede notarse, en base al ejemplo, cómo el HTML correspondiente a la lista de compras se genera dinámicamente por medio de PHP.
 
-## Variables
-Las variables son elementos de un lenguaje de programación que permiten guardar ciertos datos de una aplicación para luego poder reutilizarlos.
-
-En PHP, las variables se nombran con el signo `$` y un nombre alfanumérico (letras de la A a la Z, sin caracteres especiales ni acentos, y números del 0 al 9). Permiten, además, el caracter `_` (guión bajo, o *underscore*).
-
-Para asignarles un valor se usa el caracter `=`, y a continuación se declara dicho valor. La declaración termina con `;`.
-
-```php
-<?php
-$mensaje = '¡Hola mundo!';
-?>
-```
-
-Las variables llevan ese nombre debido a que el valor que se les asigna puede cambiar de un momento a otro, es decir que las variables pueden sobreescribirse.
-
-Ejemplo:
-
-```
-<?php
-$mensaje = '¡Hola mundo!'; // Se declara el valor de la variable.
-
-echo $mensaje; // Se imprime en pantalla "¡Hola mundo!"
-
-$mensaje = '¿Cómo estás?'; // Se redeclara el valor de la variable.
-
-echo $mensaje; // Se imprime en pantalla "¿Cómo estás?"
-?>
-```
-
 ## Constantes
 
 Son similares a las variables, con la diferencia de que no pueden sobreescribirse. También difieren en que se las declara con la función `define()`, y no hace falta que lleven el símbolo `$`. Generalmente se usan para guardar datos de configuración de una aplicación, y por convención se las declara con mayúsculas.
