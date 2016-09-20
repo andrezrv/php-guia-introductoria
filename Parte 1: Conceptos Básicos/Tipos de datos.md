@@ -4,7 +4,7 @@ PHP soporta distintos tipos de datos, los cuales pueden cumplir con diferentes p
 
 Debido a que el lenguaje no es declarativo acerca del tipo de datos que se asignan a variables (es decir que al momento de crear la variable no se especifica de qué tipo es el dato contenido), PHP reconoce el tipo de cada dato de forma automática, y al mismo tiempo otorga cierta flexibilidad al comparar entre diferentes tipos.
 
-### Booleano
+## Booleano
 
 El booleano (también *boolean* o *bool*) es el más simple de todos los tipos de datos, y representa un valor de verdad, el cual puede ser `true` (verdadero) o `false` (falso). Normalmente se lo utiliza para evaluar condiciones.
 
@@ -17,7 +17,7 @@ $bar = false;
 ?>
 ```
 
-### Entero
+## Entero
 
 Los números enteros son conocidos como `integer` o `int`, y corresponden a todo número sin decimales igual, mayor o menor a cero. También se interpretan como enteros (aunque son poco utilizados) aquellos expresados en los sistemas octal, hexadecimal y binario.
 
@@ -33,7 +33,7 @@ $a = 0b11111111; // Número binario (equivalente a 255 decimal).
 ?>
 ```
 
-### Número de punto flotante
+## Número de punto flotante
 
 También conocido como *float*, es un dato numérico que puede ser expresado como cualquier tipo de número real, aunque principalmente se lo usa con decimales.
 
@@ -45,11 +45,11 @@ $c = 100.123;
 ?>
 ```
 
-### Cadenas de caracteres
+## Cadenas de caracteres
 
 También llamado *string*, es un tipo de dato expresado como una cadena de caracteres en diferentes formatos, aunque los más utilizados son los siguientes:
 
-#### Comillas simples o dobles
+### Comillas simples o dobles
 
 El uso de ambos tipos de comillas suele producir resultados similares, aunque existen algunas diferencias considerables entre cada uno.
 
@@ -167,7 +167,36 @@ echo $mensaje;
 ?>
 ```
 
-### Arrays
+### Concatenación
+
+La concatenación es la unión de dos o más cadenas de caracteres. En PHP existen dos maneras de concatenar caracteres.
+
+#### Concatenación simple
+
+Con el caracter `.` (punto) pueden unirse dos cadenas de texto al momento de imprimir o asignar.
+
+```php
+<?php
+$mensaje = '¡Hola Mundo!';
+
+echo $mensaje . ' ¿Cómo estás?'; // Imprime "¡Hola Mundo! ¿Cómo estás?".
+?>
+```
+
+#### Concatenación por asignación
+
+También pueden concatenarse textos por medio de una nueva asignación a una variable previamente declarada. Para eso se usa el operador `.=`, el cual añade el nuevo valor al final de la cadena original.
+
+```php
+<?php
+$mensaje = '¡Hola Mundo!';
+$mensaje .= ' ¿Cómo estás?';
+
+echo $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?".
+?>
+```
+
+## Arrays
 
 Un array es lo que se entiende en programación como un mapa ordenado de datos. Básicamente, permite agrupar diferentes datos de manera ordenada con una combinación de clave y valor.
 
