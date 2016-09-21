@@ -114,119 +114,135 @@
 0. ```$a += 1;```
 0. ```$a = 2;```
 
-**¿Cuál de estas construcciones no carga el contenido de un archivo?**
+**20. ¿Cuál de estas construcciones no carga el contenido de un archivo?**
 
-0. require 'archivo.php';
-0. include_once 'archivo.php';
-0. echo 'archivo.php';
+0. ```require 'archivo.php';```
+0. ```include_once 'archivo.php';```
+0. ```echo 'archivo.php';```
 
-**Si `$a = 1` y `$b = 1`, ¿cuál de estas comparaciones no devuelve true?**
+**20. Si `$a = 1` y `$b = 1`, ¿cuál de estas comparaciones no devuelve true?**
 
-0. $a == $b
-0. $a === $b
-0. $a > $b
+0. ```$a == $b```
+0. ```$a === $b```
+0. ```$a > $b```
 
-**Si `$a = 1` y `$b = 1.0`, ¿cuál de estas comparaciones devuelve true?**
+**21. Si ```$a = 1``` y ```$b = 1.0```, ¿cuál de estas comparaciones devuelve ```true```?**
 
-0. $a === $b
-0. $a == $b
-0. $a < $b
+0. ```$a === $b```
+0. ```$a == $b```
+0. ```$a < $b```
 
-**Si `$a = 1` y `$b = '1'`, ¿cuál de estas comparaciones no devuelve false?**
+**22. Si `$a = 1` y `$b = '1'`, ¿cuál de estas comparaciones no devuelve false?**
 
-0. $a == $b
-0. $a === $b
-0. $a != $b
+0. ```$a == $b```
+0. ```$a === $b```
+0. ```$a != $b```
 
-**Teniendo en cuenta el siguiente código, ¿en cuál de estos casos se imprime "¡Hola mundo!"?**
+**23. Teniendo en cuenta el siguiente código, ¿en cuál de estos casos se imprime "¡Hola mundo!"?**
+```php
+<?php
+if ( $a === 1 ) {
+	echo "¡Hola Mundo!"
+}
+?>
+```
 
-	```if ( $a === 1 ) {
-		echo "¡Hola Mundo!"
-	}```
-    
 0. Si `$a = '1'`
 0. Si `$a = 1`
 0. Si `$a = 1.0`
 
+**24. Teniendo en cuenta el siguiente código, ¿cuál va a ser el texto que se imprima?**
 
-**Teniendo en cuenta el siguiente código, ¿cuál va a ser el texto que se imprima?**
-
-```$i = 1;
+```php
+<?php
+$i = 1;
 
 while ( $i < 5 ) {
   echo $i;
   $i++;
-}```
+}
+?>
+```
 0. No se imprime texto.
 0. Se imprime "1234".
 0. Se imprime "12345".
 
-**Teniendo en cuenta el siguiente código, ¿cuántas veces va a imprimirse el caracter "@"?**
+**25. Teniendo en cuenta el siguiente código, ¿cuántas veces va a imprimirse el caracter "@"?**
 
-```$i = 1;
+```php
+<?php
+$i = 1;
 
 while ( $i ) {
   echo '@';
-}```
+}
+?>
+```
+
 0. 10.
 0. 5.
 0. Infinitas veces.
 
-**Teniendo en cuenta el siguiente código, ¿cuál es la solución correcta para prevenir un loop infinito?**
+**26. Teniendo en cuenta el siguiente código, ¿cuál es la solución correcta para prevenir un loop infinito?**
 
-```$i = 1;
+```php
+<?php
+$i = 1;
 
 while ( $i < 5 ) {
   echo $i;
-}```
+}
+?>
+```
+
 0. Modificar la definición de `$i` por `$i = 5`.
 0. Aumentar el valor de `$i` antes del cierre del bucle con `$i++`.
 0. Modificar la condición del bucle por `$i <= 5`.
 
-**Dado `$lista = array( 'Pan', 'Leche', 'Azúcar' )`, ¿cuál de estas lineas imprime correctamente "Pan"?**
+**27. Dado `$lista = array( 'Pan', 'Leche', 'Azúcar' )`, ¿cuál de estas lineas imprime correctamente "Pan"?**
 
 0. `echo $lista[0];`
 0. `echo $lista[Pan];`
 0. `echo $lista['pan'];`
 
-**¿Cuál de estas operaciones carga correctamente el contenido del archivo `funciones.php`?**
+**28. ¿Cuál de estas operaciones carga correctamente el contenido del archivo `funciones.php`?**
 
 0. `include funciones.php;`
 0. `load 'funciones.php';`
 0. `include 'funciones.php';`
 
-**¿Cuál de estas operaciones carga correctamente el contenido del archivo `funciones.php` solo en el caso de que no se haya cargado previamente?**
+**29. ¿Cuál de estas operaciones carga correctamente el contenido del archivo `funciones.php` solo en el caso de que no se haya cargado previamente?**
 
 0. `include 'funciones.php';`
 0. `include_once 'funciones.php';`
 0. `load_once 'funciones.php';`
 
-**Si `$a = 3` y `$b = $a + 2`, ¿qué número imprime `echo $b * $a`?**
+**30. Si `$a = 3` y `$b = $a + 2`, ¿qué número imprime `echo $b * $a`?**
 
 0. 8
 0. 15
 0. 5
 
-**¿Cuál de estos operadores evalúa si un número es mayor o igual a otro?**
+**31. ¿Cuál de estos operadores evalúa si un número es mayor o igual a otro?**
 
-0. >
-0. <
-0. >=
+0. ```>```
+0. ```<```
+0. ```>=```
 
-**¿Cuál de estos operadores no evalúa si un número es menor a otro?**
+**32. ¿Cuál de estos operadores no evalúa si un número es menor a otro?**
 
-0. >=
-0. <
-0. <=
+0. ```>=```
+0. ```<```
+0. ```<=```
 
-**¿Cuál es el tipo de dato del resultado de 1 + 1.1?**
+**33. ¿Cuál es el tipo de dato del resultado de ```1 + 1.1```?**
 
-0. integer
-0. float
-0. string
+0. Integer
+0. Float
+0. String
 
-**¿Cuál es el tipo de dato del resultado de 1 + 2?**
+**34. ¿Cuál es el tipo de dato del resultado de ```1 + 2```?**
 
-0. integer
-0. float
-0. string
+0. Integer
+0. Float
+0. String
