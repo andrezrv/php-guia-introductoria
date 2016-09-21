@@ -50,67 +50,69 @@
 
 **9. ¿En cuál de estos puntos se mencionan estructuras de control?**
 
-0. if, while, for
-0. include, require, print
-0. define, echo, count
+0. `if`, `while`, `for`
+0. ```include```, ```require```, ```print```
+0. ```define```, ```echo```, ```count```
 
-** ¿Cuál de estas afirmaciones es falsa?**
+**10. ¿Cuál de estas afirmaciones es falsa?**
+
 0. Las variables no pueden ser redefinidas.
 0. Las constantes no pueden ser redefinidas.
 0. Los arrays permiten guardar grupos de datos.
 
-**¿En cuál de estos puntos no se imprime código HTML?**
+**11. ¿En cuál de estos puntos *no* se imprime código HTML?**
+
 0. `<?php echo '<strong>¡Hola Mundo!</strong>'; ?>`
 0. `<?php $a = 1; ?><strong>¡Hola Mundo!</strong>`
 0. `<?php <strong>¡Hola Mundo!</strong> ?>`
 
-**¿Cuál de estas definiciones corresponde al tipo de dato integer?**
+**12. ¿Cuál de estas definiciones corresponde al tipo de dato ```integer```?**
 
 0. Número entero, sin decimales, desde 0 al infinito, positivo o negativo.
 0. Cualquier número en el grupo de los números reales, incluyendo decimales.
 0. Una cadena de texto delimitada por comillas.
 
-**¿Cuál de estas definiciones corresponde al tipo de dato float?**
+**13. ¿Cuál de estas definiciones corresponde al tipo de dato ```float```?**
 
 0. Número entero, sin decimales, desde 0 al infinito, positivo o negativo.
 0. Cualquier número en el grupo de los números reales, incluyendo decimales.
 0. Una cadena de texto delimitada por comillas.
 
-**¿Cuál de estas definiciones corresponde al tipo de dato string?**
+**14. ¿Cuál de estas definiciones corresponde al tipo de dato ```string```?**
 
 0. Número entero, sin decimales, desde 0 al infinito, positivo o negativo.
 0. Cualquier número en el grupo de los números reales, incluyendo decimales.
 0. Una cadena de texto delimitada por comillas.
 
-**¿Cuáles de estos son operadores aritméticos?**
+**15. ¿Cuáles de estos son operadores aritméticos?**
 
-0. +, -, *, /
-0. ==, ===, !=, !==
-0. =, +=, .=
+0. ```+```, ```-```, ```*```, ```/```
+0. ```==```, ```===```, ```!=```, ```!==```
+0. ```=```, ```+=```, ```.=```
 
-**¿Cuáles de estos son operadores lógicos?**
+**16. ¿Cuáles de estos son operadores lógicos?**
 
-0. ||, &&, !
-0. >, <, <=>
-0. /=, %=
+0. ```||```, ```&&```, ```!```
+0. ```>```, ```<```, ```<>```
+0. ```/=```, ```%=```
 
-**¿Cuáles de estos no son operadores de comparación?**
+**17. ¿Cuáles de estos no son operadores de comparación?**
 
-0. ==, ===, !=, !==
-0. >, <, <=, >==
-0. ++, --
+0. ```==```, ```===```, ```!=```, ```!==```
+0. ```>```, ```<```, ```<=```, ```>==```
+0. ```++```, ```--```
 	
-**¿Cuáles de estos son operadores de asignación?**
+**18. ¿Cuáles de estos son operadores de asignación?**
 
-0. =, +=, .=
-0. ++, --
-0. +, -, *, /
+0. ```=```, ```+=```, ```.=```
+0. ```++```, ```--```
+0. ```+```, ```-```, ```*```, ```/```
 
-**Si $a = 1, ¿cuál de estas declaraciones no aumenta el valor de $a?**
+**19. Si ```$a = 1```, ¿cuál de estas declaraciones no aumenta el valor de ```$a```?**
 
-0. $a++;
-0. $a += 1;
-0. $a = 2;
+0. ```$a++;```
+0. ```$a += 1;```
+0. ```$a = 2;```
 
 **¿Cuál de estas construcciones no carga el contenido de un archivo?**
 
