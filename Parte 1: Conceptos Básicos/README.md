@@ -9,3 +9,5 @@
 * [Operadores](Operadores.md)
 * [Estructuras de Control](Estructuras de Control.md)
 * [Carga de archivos](Carga de archivos.md)
+* [Ejercicios](Ejercicios.md)
+* [Respuestas](Respuestas.md)
