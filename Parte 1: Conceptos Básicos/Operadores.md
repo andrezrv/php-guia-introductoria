@@ -172,4 +172,18 @@ echo $c;   // Imprime 4.
 $d = 5;
 echo $d--; // Imprime 5.
 echo $d;   // Imprime 4.
-?>```
+?>
+```
+
+## Operadores lógicos
+
+Sirven para asignar valores de verdad a evaluaciones sobre diferentes datos.
+
+| Operador | Nombre | Ejemplo | Descripción |
+| -- | -- | -- | -- |
+| `&&` | Conjunción ("y") | `$a && $b` | `true` si `$a` y `$b` son `true` |
+| `and` | Conjunción ("y", sintaxis alternativa) | `$a or $b` | `true` si `$a` y `$b` son `true`  |
+| <code>&#124;&#124;</code> | Disyunción ("o") | <code>$a &#124;&#124; $b</code> | `true` si `$a` es `true` o `$b` es `true` |
+| `or` | Disyunción ("o", sintaxis alternativa) | `$a or $b` | `true` si `$a` es `true` o `$b` es `true`  |
+| `xor` | Disyunción exclusiva ("o ... o ...") | `$a xor $b` | `true` si `$a` es `true` o `$b` es `true`, pero no ambos |
+| `!` | Negación ("no") | `! $a` (o `$a != true`) | `true` si `$a` no es `$true` |
