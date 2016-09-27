@@ -1,4 +1,4 @@
-## Paradigma estructurado
+# Paradigma estructurado
 
 El paradigma de programación estructurada trabaja sobre la idea de que todo programa o aplicación puede escribirse usando tres tipos de instrucciones:
 
