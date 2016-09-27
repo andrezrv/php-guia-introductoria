@@ -13,3 +13,6 @@
   * [Carga de archivos](Parte 1: Conceptos Básicos/Carga de archivos.md)
   * [Ejercicios](Parte 1: Conceptos Básicos/Ejercicios.md)
   * [Respuestas](Parte 1: Conceptos Básicos/Respuestas.md)
+* [Parte 2: Paradigmas de Programación](Parte 2: Paradigmas de Programación/README.md)
+  * [Paradigma Estructurado](Parte 2: Paradigmas de Programación/Paradigma Estructurado.md)
+  * [Paradigma Funcional](Parte 2: Paradigmas de Programación/Paradigma Funcional.md)
