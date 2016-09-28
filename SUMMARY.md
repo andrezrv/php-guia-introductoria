@@ -11,6 +11,7 @@
   * [Operadores](Parte 1: Conceptos Básicos/Operadores.md)
   * [Estructuras de Control](Parte 1: Conceptos Básicos/Estructuras de Control.md)
   * [Carga de archivos](Parte 1: Conceptos Básicos/Carga de archivos.md)
+  * [Solicitudes](Parte 1: Conceptos Básicos/Solicitudes.md)
   * [Ejercicios](Parte 1: Conceptos Básicos/Ejercicios.md)
   * [Respuestas](Parte 1: Conceptos Básicos/Respuestas.md)
 * [Parte 2: Paradigmas de Programación](Parte 2: Paradigmas de Programación/README.md)
