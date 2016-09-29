@@ -1,3 +1,11 @@
 # Servidor local
 
-TBD
+Para empezar a trabajar con PHP es necesario contar con un servidor web instalado en el equipo en el cual va a estar alojado nuestro sitio, programa o aplicación. Si se encuentra en un equipo de terceros, como un proveedor de hosting, generalmente no necesitamos instalar ningún tipo de software adicional, ya que casi todos los proveedores cuentan con un servidor web capaz de procesar PHP preinstalado. Sin embargo, si queremos ejecutarlo desde el mismo equipo en el que estamos trabajando, normalmente necesitamos instalar tres cosas: un servidor web, un intérprete de PHP y un gestor de bases de datos.
+
+El servidor web y el gestor de base de datos son lo que, en sistemas operativos, se denomina **servicios**. Un servicio es un tipo de programa que se encuentra ejecutándose de manera continua, normalmente invisible al usuario, y que espera que ocurran ciertas acciones para ejecutar determinados procesos. El servidor web más popular para trabajar con PHP es Apache, y el gestor de base de datos más utilizado es MySQL. El intérprete de PHP es un componente adicional del servidor web, el cual se instala para que el servidor web comprenda lo que escribimos en ese lenguaje.
+
+La instalación de cada uno de estos servicios por separado es una tarea complicada y tediosa para quienes recién están aprendiendo a programar. Por eso se crearon programas que permiten instalar y gestionar los servicios con muy pocos clicks. Los más populares son XAMPP, en Windows y Linux, y MAMP en MacOS. Otros bastante conocidos son LAMP y WAMP.
+
+Una vez instalado cualquiera de estos programas, vamos a tener disponible un panel de control, desde el cual vamos a poder activar o desactivar los servicios a medida que los necesitemos.
+
+En la carpeta en la que se instaló el programa vamos a encontrarnos con un directorio reservado para nuestros proyectos. Generalmente este directorio se llama `htdocs` o `www`, y cualquier proyecto que incluyamos en él va a ser navegable a través de la URL `http://localhost/`. Por ejemplo, si creamos una carpeta llamada `mi-sitio`, con un archivo `index.php` adentro, vamos a poder navegar ese archivo ingresando a `http://localhost/mi-sitio/`.
