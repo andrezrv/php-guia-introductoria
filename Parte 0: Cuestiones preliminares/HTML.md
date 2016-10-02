@@ -16,7 +16,7 @@ Las etiquetas HTML siguen el siguiente formato:
 <nombre atributo="valor">Contenido</nombre>
 ```
 
-El nombre de la etiqueta está relacionado con el propósito que cumple la misma dentro del documento. Por ejemplo, si usamos la etiqueta `<strong>` para envolver texto, estamos indicando que ese texto tiene mayor una mayor relevancia, y si usamos `<h1>` estamos indicando un título de primer nivel.
+El nombre de la etiqueta está relacionado con el propósito que cumple la misma dentro del documento. Por ejemplo, si usamos la etiqueta `<strong>` para envolver texto, estamos indicando que ese texto tiene mayor relevancia, y si usamos `<h1>` estamos indicando un título de primer nivel.
 
 Por ejemplo, el siguiente código mostraría un texto conformado por un título y un párrafo, con parte del texto en negrita:
 
