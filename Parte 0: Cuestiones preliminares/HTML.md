@@ -39,6 +39,7 @@ Un documento HTML válido debe respetar e incluir ciertas etiquetas, más allá 
  </head>
  <body>
     <h1>Lorem Ipsum</h1>
+
     <p>
         <strong>Lorem ipsum</strong> dolor sit amet.
     </p>
