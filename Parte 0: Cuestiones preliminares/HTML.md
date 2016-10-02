@@ -34,14 +34,14 @@ Un documento HTML válido debe respetar e incluir ciertas etiquetas, más allá 
 <!DOCTYPE html>
 <html>
  <head>
- <meta charset="utf-8">
- <title></title>
+     <meta charset="utf-8">
+     <title></title>
  </head>
  <body>
-    <h1>Lorem Ipsum</h1>
+     <h1>Lorem Ipsum</h1>
 
-    <p>
-        <strong>Lorem ipsum</strong> dolor sit amet.
+     <p>
+         <strong>Lorem ipsum</strong> dolor sit amet.
     </p>
  </body>
 </html>
