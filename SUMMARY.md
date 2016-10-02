@@ -1,6 +1,11 @@
 # Contenidos
 
 * [Introducción](README.md)
+* [Parte 0: Cuestiones preliminares](Parte 0: Cuestiones preliminares/README.md)
+    * [Acerca de PHP](Parte 0: Cuestiones preliminares/Acerca de PHP.md)
+    * [Servidor local](Parte 0: Cuestiones preliminares/Servidor local.md)
+    * [HTML](Parte 0: Cuestiones preliminares/HTML.md)
+    * [CSS](Parte 0: Cuestiones preliminares/CSS.md)
 * [Parte 1: Conceptos Básicos](Parte 1: Conceptos Básicos/README.md)
   * [Tags de apertura y cierre](Parte 1: Conceptos Básicos/Tags de apertura y cierre.md)
   * [Comentarios](Parte 1: Conceptos Básicos/Comentarios.md)
