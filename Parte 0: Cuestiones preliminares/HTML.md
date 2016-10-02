@@ -46,3 +46,5 @@ Un documento HTML válido debe respetar e incluir ciertas etiquetas, más allá 
  </body>
 </html>
 ```
+
+En el [curso de HTML y CSS de Codecademy](https://www.codecademy.com/learn/web) puede encontrarse información más específica acerca de la sintaxis y el uso de HTML, así como varios ejercicios para aprender a usarlo correctamente.
