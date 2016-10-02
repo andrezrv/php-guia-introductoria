@@ -80,4 +80,6 @@ CSS:
 }
 ```
 
+## Más información
 
+En el [curso de HTML y CSS de Codecademy](https://www.codecademy.com/learn/web) puede encontrarse información más específica acerca de la sintaxis y el uso de CSS, así como varios ejercicios para aprender a usarlo correctamente.
