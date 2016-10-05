@@ -1,4 +1,4 @@
-# Summary
+# Contenidos
 
 * [Introducción](README.md)
 * [Parte 0: Cuestiones preliminares](Parte 0: Cuestiones preliminares/README.md)
@@ -22,5 +22,5 @@
 * [Parte 2: Paradigmas de Programación](Parte 2: Paradigmas de Programación/README.md)
     * [Paradigma Estructurado](Parte 2: Paradigmas de Programación/Paradigma Estructurado.md)
     * [Paradigma Funcional](Parte 2: Paradigmas de Programación/Paradigma Funcional.md)
-    * [Desafíos](desafíos.md)
+    * [Desafíos](Parte 2: Paradigmas de Programación/Desafíos.md)
 
