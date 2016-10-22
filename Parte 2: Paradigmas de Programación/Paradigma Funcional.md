@@ -172,3 +172,138 @@ if ( ! function_exists( 'mi_funcion' ) ) {
 mi_funcion(); // Imprime "Hola Mundo!".
 ?>
 ```
+
+## Tipos de variables
+
+### Parámetros
+
+Los parámetros son los valores asignados a una función al momento de utilizarla. En un sentido conceptual no son variables, ya que no se los declara de manera directa en la función, sino que al ejecutarse la función ya fueron previamente asignados a la misma.
+
+```php
+<?php
+function mi_funcion( $text /* <-- Valor preasignado en llamada. */ ) {
+  echo $text;
+}
+
+mi_funcion( 'bar' ); // Imprime "bar".
+?>
+```
+
+Sin embargo, técnicamente funcionan de la misma manera que las variables normales, ya que se los puede modificar en el código interno a la función.
+
+```php
+<?php
+function mi_funcion( $text /* <-- Valor preasignado en llamada. */ ) {
+  $text .= 'ista'; // Se altera el valor del parámetro.
+
+  echo $text;
+}
+
+mi_funcion( 'bar' ); // Imprime "barista".
+?>
+```
+
+
+
+
+### Globales y locales
+
+Una particularidad de las funciones en PHP es que introducen un contexto o ámbito (_scope_, en inglés) separado de aquel en el cual se ejecuta el código escrito por fuera de ellas. Llamamos a estos contextos **locales**, en oposición al contexto **global**.
+
+```php
+<?php
+// Contexto local 1.
+
+function mi_funcion() {
+  // Contexto local 2.
+}
+
+// Contexto local 1.
+mi_funcion();
+?>
+```
+
+Esta diferenciación de contextos impide que los valores declarados en uno de ellos sea directamente accesible al otro. Por ejemplo, una variable declarada en un contexto no puede ser usada de manera directa en otro.
+
+```php
+<?php
+// Contexto local 1.
+$foo = 'bar';
+
+function mi_funcion() {
+  // Contexto local 2.
+  $num = 1;
+
+  echo $foo;
+}
+
+echo $num; // No imprime nada.
+
+// Contexto local 1.
+mi_funcion(); // No imprime nada.
+?>
+```
+
+Una manera de intercambiar información entre diferentes contextos es usar parámetros en nuestras funciones:
+
+```php
+<?php
+// Contexto local 1.
+$foo = 'bar';
+
+function mi_funcion( $text ) {
+ // Contexto local 2.
+ echo $text;
+}
+
+// Contexto local 1.
+mi_funcion( $foo ); // Imprime "bar".
+?>
+```
+
+En este ejemplo, la variable `$foo` se asigna como valor del parámetro `$text` de `mi_funcion()`, lo cual permite reutilizar el valor creado en un contexto diferente.
+
+Por otra parte, también es posible utilizar valores globales por medio de la palabra clave `global`. Esta palabra clave permite que ciertas variables sean accesibles desde cualquier lugar de una aplicación, sin importar el contexto de ejecución actual.
+
+```php
+<?php
+// Contexto local 1.
+global $foo; // Se inicializa una variable global.
+
+$foo = 'bar'; // Se asigna un valor.
+
+function mi_funcion() {
+  // Contexto local 2.
+  global $foo; // Se inicializa una variable global.
+
+  echo $foo; // Se usa la variable global.
+}
+
+// Contexto local 1.
+mi_funcion(); // Imprime "bar".
+?>
+```
+
+De esta manera, si la variable global tiene un valor asignado desde un momento previo a su utilización, podrá accederse a dicho valor sin importar dónde se lo usa.
+
+### Estáticas
+
+Las variables estáticas son un tipo especial de variable que "recuerda" el último valor que se les asignó. Se utilizan con la palabra clave `static`.
+
+```php
+<?php
+function sum1() {
+    static $value = 0; // Se declara una variable estática.
+
+    $value++; // Se altera la variable.
+
+    echo $value; // Se imprime el valor actual.
+}
+
+sum1(); // Imprime 1.
+sum1(); // Imprime 2. Se ignora "static $value = 0;".
+sum1(); // Imprime 3. Se ignora "static $value = 0;".
+?>
+```
+
+La principal particularidad de estas variables es que solamente se inicializan una vez. Es decir que, a partir de la segunda vez que se llama a una función que usa una variable estática, la declaración inicial de la variable es ignorada por el programa. En cambio, se retiene el último valor asignado, el cual está disponible para ser reutilizado.
