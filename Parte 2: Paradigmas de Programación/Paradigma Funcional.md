@@ -173,6 +173,20 @@ mi_funcion(); // Imprime "Hola Mundo!".
 ?>
 ```
 
+## Valores por defecto
+
+Para los casos en los que algún parámetro no sea obligatorio al momento de llamar a una función, PHP permite asignar valores por defecto en la declaración de la función misma.
+
+```php
+<?php
+function saludar( $nombre = 'Armando', $apellido = 'Pérez' ) {
+    echo 'Hola ' . $nombre . ' ' . $apellido . '!';
+}
+
+saludar(); // Imprime "Hola Armando Pérez!".
+?>
+```
+
 ## Tipos de variables
 
 ### Parámetros
@@ -202,9 +216,6 @@ function mi_funcion( $text /* <-- Valor preasignado en llamada. */ ) {
 mi_funcion( 'bar' ); // Imprime "barista".
 ?>
 ```
-
-
-
 
 ### Globales y locales
 
