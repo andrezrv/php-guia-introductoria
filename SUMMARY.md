@@ -24,5 +24,4 @@
     * [Paradigma Estructurado](Parte 2: Paradigmas de Programación/Paradigma Estructurado.md)
     * [Paradigma Funcional](Parte 2: Paradigmas de Programación/Paradigma Funcional.md)
     * [Desafíos](Parte 2: Paradigmas de Programación/Desafíos.md)
-
-
+    * [Ejercicios](Parte 2: Paradigmas de Programación/Ejercicios.md)
