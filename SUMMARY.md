@@ -24,6 +24,7 @@
     * [Paradigma Estructurado](Parte 2: Paradigmas de Programación/Paradigma Estructurado.md)
     * [Paradigma Funcional](Parte 2: Paradigmas de Programación/Paradigma Funcional.md)
     * [Desafíos](Parte 2: Paradigmas de Programación/Desafíos.md)
+    * [Programación Orientada a Objetos](Parte 2: Paradigmas de Programación/Programación Orientada a Objetos.md)
     * [Ejercicios](Parte 2: Paradigmas de Programación/Ejercicios.md)
 * [Parte 3: Bases de Datos](Parte 3: Bases de Datos/README.md)
     * [Introducción](Parte 3: Bases de Datos/Introducción.md)
