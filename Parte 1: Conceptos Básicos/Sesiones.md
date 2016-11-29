@@ -29,3 +29,25 @@ $_SESSION['count']++;
 
 echo $_SESSION['count'];
 ```
+
+Haciendo uso de `$_SESSION` también puede construirse un proceso que muestra cierto contenido al usuario en caso de estar logueado en un sistema, y un formulario de login en caso de no estarlo:
+
+```php
+<?php
+if ( isset( $_SESSION['username'] ) ) {
+    echo 'Bienvenido usuario!';
+} else {
+
+}
+?>
+<form method="POST" action="">
+    <label for="username">Nombre de usuario</label>
+    <input name="username" type="text" /><br />
+
+    <label for="password">Contraseña</label>
+    <input name="password" type="password" /><br />
+
+    <input type="submit" value="Enviar" />
+</form>
+
+```
