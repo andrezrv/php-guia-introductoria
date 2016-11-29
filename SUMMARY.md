@@ -17,6 +17,7 @@
     * [Estructuras de Control](Parte 1: Conceptos Básicos/Estructuras de Control.md)
     * [Carga de archivos](Parte 1: Conceptos Básicos/Carga de archivos.md)
     * [Solicitudes](Parte 1: Conceptos Básicos/Solicitudes.md)
+    * [Sesiones](Parte 1: Conceptos Básicos/Sesiones.md)
     * [Desafíos](Parte 1: Conceptos Básicos/Desafíos.md)
     * [Ejercicios](Parte 1: Conceptos Básicos/Ejercicios.md)
     * [Respuestas](Parte 1: Conceptos Básicos/Respuestas.md)
