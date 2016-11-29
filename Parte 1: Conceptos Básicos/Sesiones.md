@@ -34,11 +34,24 @@ Haciendo uso de `$_SESSION` también puede construirse un proceso que muestra ci
 
 ```php
 <?php
+// Se crea una función para validar nombre de usuario y contraseña.
+function validate_user( $username, $password ) {
+    if ( $username === 'admin' && $password === '123456' )    {
+        // Si los datos son válidos, se crea el valor de sesión.
+        $_SESSION['username'] = $username;
+    }
+}
+
+// Si se envió información a través del formulario, se intenta validar el usuario.
+if ( ! empty( $_POST['username'] ) && ! empty( $_POST['password'] ) ) {
+    validate_user( $_POST['username'], $_POST['password'] );
+}
+
+// Si existe una sesión de usuario, se imprime un mensaje de bienvenida.
 if ( isset( $_SESSION['username'] ) ) {
     echo 'Bienvenido usuario!';
 } else {
-
-}
+// Si no existe sesión de usuario, se imprime el formulario de contacto.
 ?>
 <form method="POST" action="">
     <label for="username">Nombre de usuario</label>
@@ -49,5 +62,7 @@ if ( isset( $_SESSION['username'] ) ) {
 
     <input type="submit" value="Enviar" />
 </form>
-
+<?php
+}
+?>
 ```
