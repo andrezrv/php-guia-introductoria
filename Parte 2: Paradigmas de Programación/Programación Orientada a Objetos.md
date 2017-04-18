@@ -1,6 +1,6 @@
 # Programación Orientada a Objetos
 
-La programación orientada a objetos es un paradigma de programación basado en la idea de que un programa está definido por ciertas interacciones entre, al menos, un usuario (del programa) y una o más entidades. Dichas entidades se llaman _objetos_ y cuentan, por un lado, con _atributos_, y por otro lado, con _métodos_.
+La programación orientada a objetos es un paradigma de programación basado en la idea de que un programa está definido por ciertas interacciones entre un usuario y una o más entidades. Dichas entidades se llaman _objetos_ y cuentan, por un lado, con _atributos_, y por otro lado, con _métodos_.
 
 Los atributos (también llamados _propiedades_), son diferentes datos que definen el estado actual o la forma de un objeto. Los métodos son acciones que un objeto puede realizar, y que tienen la capacidad de modificar el estado del objeto al que pertenecen. En PHP, los métodos son similares a las funciones.
 
@@ -9,9 +9,9 @@ Los objetos son tipos de datos complejos, y solamente pueden construirse a parti
 ```php
 <?php
 class Futbolista {
-    var $nombre;
-    var $apellido;
-    var $energia;
+	var $nombre;
+	var $apellido;
+	var $energia;
 }
 
 $jugador = new Futbolista;
@@ -22,9 +22,9 @@ En PHP, las variables internas de una clase son sus propiedades. Al crear un nue
 ```php
 <?php
 class Futbolista {
- var $nombre;
- var $apellido;
- var $energia;
+	var $nombre;
+	var $apellido;
+	var $energia;
 }
 
 $jugador = new Futbolista;
@@ -39,18 +39,18 @@ Al introducir métodos en una clase, estos tienen la posibilidad de modificar la
 ```php
 <?php
 class Futbolista {
-    var $nombre;
-    var $apellido;
-    var $energia;
+	var $nombre;
+	var $apellido;
+	var $energia;
 
-    /**
-     * Descuenta un punto de energía por cada 100 metros corridos.
-     */
-    function correr( $metros ) {
-        if ( $metros ) {
-            $this->energia = $this->energia - ( $metros / 100 );
-        }
-    }
+	/**
+	 * Descuenta un punto de energía por cada 100 metros corridos.
+	 */
+	function correr( $metros ) {
+		if ( $metros ) {
+			$this->energia = $this->energia - ( $metros / 100 );
+		}
+	}
 }
 
 $jugador = new Futbolista;
@@ -68,18 +68,18 @@ También es posible asignar valores predeterminados a un objeto durante la decla
 ```php
 <?php
 class Futbolista {
-    var $nombre;
-    var $apellido;
-    var $energia = 100; // Valor predeterminado.
+	var $nombre;
+	var $apellido;
+	var $energia = 100; // Valor predeterminado.
 
-    /**
-     * Descuenta un punto de energía por cada 100 metros corridos.
-     */
-    function correr( $metros ) {
-        if ( $metros ) {
-            $this->energia = $this->energia - ( $metros / 100 );
-        }
-    }
+	/**
+	* Descuenta un punto de energía por cada 100 metros corridos.
+	*/
+	function correr( $metros ) {
+		if ( $metros ) {
+			$this->energia = $this->energia - ( $metros / 100 );
+		}
+	}
 }
 
 $jugador = new Futbolista; // $jugador->energia vale 100.
@@ -92,37 +92,79 @@ $jugador->correr( 100 ); // $jugador->energia vale 98.
 
 ```
 
-Las clases admiten la creación de un método llamado `__construct()`, el cual se ejecuta automáticamente al crear un nuevo objeto. Este método suele usarse para asignar propiedades al objeto dependiendo de ciertas condiciones.
+## Constructores
+Las clases admiten la creación de un método llamado `__construct()`, el cual se ejecuta automáticamente al crear un nuevo objeto. Este método suele usarse para asignar propiedades al objeto dependiendo de ciertas condiciones. De esta manera, los parámetros de un constructor pueden usarse al crear un objeto para asignar valores a sus propiedades.
 
 ```php
 <?php
 class Futbolista {
-    var $nombre;
-    var $apellido;
-    var $energia = 100; // Valor predeterminado.
+	var $nombre;
+	var $apellido;
+	var $energia = 100; // Valor predeterminado.
 
-    function __construct( $nombre, $apellido ) {
-        $this->nombre = $nombre;
-        $this->apellido = $apellido;
-    }
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+	}
 
-    /**
-     * Descuenta un punto de energía por cada 100 metros corridos.
-     */
-    function correr( $metros ) {
-        if ( $metros ) {
-            $this->energia = $this->energia - ( $metros / 100 );
-        }
-    }
+	/**
+	* Descuenta un punto de energía por cada 100 metros corridos.
+	*/
+	function correr( $metros ) {
+		if ( $metros ) {
+			$this->energia = $this->energia - ( $metros / 100 );
+		}
+	}
 }
 
-$jugador = new Futbolista( 'Lionel', 'Messi' );
+$jugador = new Futbolista( 'Lionel', 'Messi' ); // Se crea objeto usando constructor.
 // $jugador->nombre es "Lionel".
 // $jugador->apellido es "Messi".
 // $jugador->energia es 100.
 
 $jugador->correr( 100 ); // $jugador->energia vale 99.
 $jugador->correr( 100 ); // $jugador->energia vale 98.
+```
+
+Los constructores forman parte del conjunto de métodos mágicos que provee PHP. Llamamos métodos mágicos a un cierto tipo de métodos con nombres reservados, los cuales se ejecutan de manera automática en determinados contextos, sin necesidad de llamarlos desde una instancia. Estos métodos mágicos suelen ser nombrados con el prefijo `__`.
+
+## Destructores
+Un método destructor, identificado con el nombre `__destruct()`, es un método mágico que se ejecuta automáticamente cuando el objeto deja de ser utilizado. Por lo general, esto ocurre después de ejecutarse la última línea del programa.
+
+```php
+<?php
+class Futbolista {
+	var $nombre;
+	var $apellido;
+	var $energia = 100; // Valor predeterminado.
+
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+	}
+
+	function __destruct() {
+		echo 'Hola mundo!';
+	}
+
+	/**
+	* Descuenta un punto de energía por cada 100 metros corridos.
+	*/
+	function correr( $metros ) {
+		if ( $metros ) {
+			$this->energia = $this->energia - ( $metros / 100 );
+		}
+	}
+}
+
+$jugador = new Futbolista( 'Lionel', 'Messi' ); // Se crea objeto usando constructor.
+// $jugador->nombre es "Lionel".
+// $jugador->apellido es "Messi".
+// $jugador->energia es 100.
+
+$jugador->correr( 100 ); // $jugador->energia vale 99.
+$jugador->correr( 100 ); // $jugador->energia vale 98.
+// Se imprime "Hola mundo!" al ejecutarse el destructor.
 ```
 
 ## Herencia
@@ -251,7 +293,6 @@ echo $jugador->energia; // Imprime "50".
 ```
 
 ## Visibilidad privada
-
 Se define con la palabra clave `private`, y solo permite utilizar propiedades y métodos privados desde la clase que los define.
 
 ```php
@@ -276,11 +317,11 @@ class Futbolista {
 		}
 	}
 
-	private redefinir_energia( $valor ) {
+	private function redefinir_energia( $valor ) {
 		$this->energia = $valor;
 	}
 
-	public energia_actual() {
+	public function energia_actual() {
 		return $this->energia;
 	}
 }
@@ -296,7 +337,6 @@ echo $jugador->energia; // Error.
 ```
 
 ## Visibilidad protegida
-
 Se define con la palabra clave `protected`. Hace accesibles las propiedades y métodos de una clase principal dentro de una clase secundaria, pero no en un objeto instanciado.
 
 ```php
@@ -321,11 +361,11 @@ class Deportista {
 		}
 	}
 
-	private redefinir_energia( $valor ) {
+	private function redefinir_energia( $valor ) {
 		$this->energia = $valor;
 	}
 
-	public energia_actual() {
+	public function energia_actual() {
 		return $this->energia;
 	}
 }
@@ -344,3 +384,115 @@ echo $jugador->energia_actual(); // Imprime "99".
 echo $jugador->energia; // Error.
 ```
 
+## Getters
+Los _getters_ son métodos mágicos que se ejecutan cuando un objeto instanciado intenta acceder a una propiedad privada o protegida. Llevan el nombre `__get()` y reciben un único parámetro, correspondiente al nombre de la propiedad a la cual se desea acceder.
+
+Dado que, por defecto, PHP arroja un error cuando se intenta acceder a propiedades privadas o protegidas, los _getters_ son ideales para restringir qué valores van a ser accesibles desde la instancia y cuáles no.
+
+```php
+<?php
+class Futbolista {
+	private $nombre;
+	private $apellido;
+
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+	}
+
+	function __get( $propiedad ) {
+		return $this->$propiedad;
+	}
+}
+
+$jugador = new Futbolista( 'Lionel', 'Messi' ); 
+echo $jugador->nombre; // // Ejecuta __get() e imprime "Lionel".
+```
+
+## Setters
+Un _setter_, definido con el nombre `__set()`, se ejecuta automáticamente cuando se intenta asignar un valor a una propiedad privada o protegida desde un objeto. Recibe dos parámetros: el primero es el nombre de la propiedad, y el segundo es el valor que se pretende asignar.
+
+De forma similar a cómo funcionan los _setters_, son ideales para restringir qué propiedades pueden ser definidas desde el objeto, y de qué manera.
+
+```php
+<?php
+class Futbolista {
+	private $nombre;
+	private $apellido;
+
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+	}
+
+	function __get( $propiedad ) {
+		return $this->$propiedad;
+	}
+
+	function __set( $propiedad, $valor ) {
+		$this->$propiedad = $valor;
+	}
+}
+
+$jugador = new Futbolista( 'Lionel', 'Messi' );
+$jugador->nombre = 'Lio'; // Ejecuta __set().
+echo $jugador->nombre; // Ejecuta __get() e imprime "Lio".
+```
+
+## Propiedades estáticas
+Las propiedades estáticas, declaradas con la palabra clave `static`, son un tipo especial de propiedad que no considera el contexto particular de cada objeto creado a partir de una clase. No tiene relación directa con las instancias de una clase, sino con la clase misma. Esto significa que su último valor asignado se va a mantener igual, sin importar cuántos objetos se hayan creado a partir de la clase.
+
+Para acceder a propiedades estáticas es necesario cambiar el símbolo  accesor. En lugar de usar `->`, como hacemos con propiedades no estáticas, debe usarse `::`.
+
+Por otra parte, al no ser utilizado en un contexto de objeto, en lugar de usar el nombre de la variable a la cual se asignó una instancia, se usa directamente el nombre de la clase. Por ejemplo, `Clase::$propiedad`.
+
+Dentro de la clase misma, en lugar de usar `$this`, que corresponde a la instancia actual, se usa `self`, una palabra clave que referencia el nombre de la clase actual.
+
+```php
+<?php
+class Futbolista {
+	private $nombre;
+	private $apellido;
+	public $cantidad_de_futbolistas = 0;
+
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		self::$cantidad_de_futbolistas++;
+	}
+}
+
+$jugador_1 = new Futbolista( 'Lionel', 'Messi' );
+$jugador_2 = new Futbolista( 'Gonzalo', 'Higuaín' );
+
+echo Futbolista::$cantidad_de_futbolistas; // Imprime "2".
+```
+
+## Métodos estáticos
+Al igual que las propiedades estáticas, los métodos estáticos carecen de contexto, y solamente están relacionados con la clase que los contiene. Su uso es similar al de una función auxiliar.
+
+También se declaran con la palabra clave `static`, y su uso del accesor `::` es igual al de las propiedades estáticas.
+
+```php
+<?php
+class Futbolista {
+	private $nombre;
+	private $apellido;
+	private $cantidad_de_futbolistas = 0;
+
+	function __construct( $nombre, $apellido ) {
+		$this->nombre = $nombre;
+		$this->apellido = $apellido;
+		self::$cantidad_de_futbolistas++;
+	}
+
+	static function cantidad_de_futbolistas() {
+		return self::$cantidad_de_futbolistas;
+	}
+}
+
+$jugador_1 = new Futbolista( 'Lionel', 'Messi' );
+$jugador_2 = new Futbolista( 'Gonzalo', 'Higuaín' );
+
+echo Futbolista::cantidad_de_futbolistas(); // Imprime "2".
+```
