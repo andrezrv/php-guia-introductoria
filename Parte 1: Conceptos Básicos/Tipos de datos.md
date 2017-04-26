@@ -73,7 +73,7 @@ echo '¡Hola Mundo! $mensaje'; // Imprime "¡Hola Mundo! $mensaje";
 ?>
 ```
 
-Como se ve en el ejemplo, usando comillas dobles, las variables dentro del texto se interpretan como tales; mientras que, usando comillas simples, se interpreta como texto el nombre de la variable.
+Como se ve en el ejemplo, usando comillas dobles, las variables dentro del texto se interpretan como tales (es decir que son evaluadas); mientras que, usando comillas simples, se interpreta como texto el nombre de la variable.
 
 Para resolver este problema con las comillas simples, puede usarse una concatenación de texto:
 
@@ -83,49 +83,6 @@ $mensaje = '¿Cómo estás?';
 
 echo "¡Hola Mundo! $mensaje"; // Imprime "¡Hola Mundo! ¿Cómo estás?";
 echo '¡Hola Mundo! ' . $mensaje; // Imprime "¡Hola Mundo! ¿Cómo estás?";
-?>
-```
-
-Por otra parte, una limitacion de las comillas dobles es que no soportan saltos de línea ni tabulaciones.
-
-```php
-<?php
-$mensaje = "¡Hola Mundo!
-  ¿Cómo estás?";
-
-echo $mensaje;
-// Imprime:
-// ¡Hola Mundo! ¿Cómo estás?
-
-$mensaje = '¡Hola Mundo!
-  ¿Cómo estás?';
-
-echo $mensaje;
-// Imprime:
-// ¡Hola Mundo!
-//   ¿Cómo estás?
-?>
-```
-
-Según el ejemplo, la impresión derivada de la variable declarada con comillas simples respetó el salto de línea y la tabulación, pero la derivada de la variable con comillas dobles fue de una única línea. Para que estos caracteres sean respetados por las comillas dobles, necesitamos reponerlos con las expresiones `\b`, para el salto de línea, y `\t` para la tabulación.
-
-```php
-<?php
-$mensaje = "¡Hola Mundo!\b
-\t¿Cómo estás?";
-
-echo $mensaje;
-// Imprime:
-// ¡Hola Mundo!
-//   ¿Cómo estás?
-
-$mensaje = '¡Hola Mundo!
-  ¿Cómo estás?';
-
-echo $mensaje;
-// Imprime:
-// ¡Hola Mundo!
-//   ¿Cómo estás?
 ?>
 ```
 
