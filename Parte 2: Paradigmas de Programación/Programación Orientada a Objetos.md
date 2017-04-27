@@ -235,6 +235,14 @@ class Futbolista extends Deportista {}
 class Basquetbolista extends Deportista {}
 ```
 
+## Polimorfismo
+
+El polimorfismo es un principio de la programación orientada a objetos que se refiere a diferentes clases que pueden compartir aspecto y comportamiento. La forma más común de polimorfismo se da a partir de la herencia, es decir extendiendo clases principales al crear nuevas clases secundarias.
+
+De esta manera, las clases de nuestro ejemplo anterior, `Futbolista` y `Basquetbolista` son polimórficas, ya que tienen aspecto y comportamiento en común con las clases que extienden.
+
+Una consecuencia del polimorfismo es que los objetos creados a partir de una clase secundaria son, simultáneamente, instancias de todas las clases del árbol de clases al que pertenecen. Por ejemplo, dado `$f = new Futbolista`, el objeto contenido en `$f` es una instancia de `Futbolista`, `Deportista` y `Persona`.
+
 ## Visibilidad
 
 PHP permite declarar el tipo de visibilidad de propiedades y métodos de una clase, con lo cual es posible definir en qué contextos pueden ser utilizados. La visibilidad puede ser de tres tipos: pública, protegida o privada.
